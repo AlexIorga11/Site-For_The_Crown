@@ -23,8 +23,8 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="PaginaPrincipalaFC.aspx" title="Aceasta pagina prezinta aspecte ale jocului">Pagina principala</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Login.aspx" title="Aceasta pagina va ajuta sa va logati cu un cont deja existent">Logare</a></li>
+                        <li class="nav-item"><a class="nav-link" href="PaginaPrincipalaFC.aspx" title="Aceasta pagina prezinta aspecte ale jocului">Main page</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Login.aspx" title="Aceasta pagina va ajuta sa va logati cu un cont deja existent">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -46,25 +46,17 @@
 
         <main class="form-signin">
     <img class="mb-4" src="Other/Crown.png" alt="" width="100" height="68">
-    <h2 class="h2 mb-3 fw-normal">Introduceti datele de conectare</h2>
+    <h2 class="h2 mb-3 fw-normal">Account details</h2>
             <div>
-      <asp:TextBox ID="TextBoxName" runat="server"  placeholder="Nume utlizator" Width="300px" BackColor="#F0F0F0" BorderStyle="None"></asp:TextBox>
+      <asp:TextBox ID="TextBoxName" runat="server"  placeholder="Username" Width="300px" BackColor="#F0F0F0" BorderStyle="None"></asp:TextBox>
                 <br />
                 <asp:Label ID="LabelNume" runat="server" ForeColor="#CC3300"></asp:Label>
                 <br />
       <asp:TextBox ID="TextBoxEmail" runat="server"  placeholder="E-mail" Width="300px" BackColor="#F0F0F0" BorderStyle="None" TextMode="Email"></asp:TextBox>
                 <br />
-                <br />
     </div>
-      &nbsp;
-      <asp:TextBox ID="TextBoxPass" runat="server" placeholder="Parola" Width="300px" BackColor="#F0F0F0" BorderStyle="None" TextMode="Password"></asp:TextBox>
-      &nbsp;<br />
-        <asp:Label ID="LabelParola" runat="server" ForeColor="#CC3300"></asp:Label>
         <br />
-      <asp:TextBox ID="TextBoxRPass" runat="server" placeholder="Repetati parola" Width="300px" BackColor="#F0F0F0" BorderStyle="None" TextMode="Password"></asp:TextBox>
-            <br />
-        <br />
-            <h4 class="h4 mb-3 fw-normal">Selectati imaginea de profil</h4>
+            <h4 class="h4 mb-3 fw-normal">Select a profile image</h4>
     <div>
         <asp:Panel ID="Panel1" runat="server" Height="350px">
             <asp:ImageButton ID="ImageButton1" runat="server" Height="100px" ImageUrl="~/Photos/Profile/1.PNG" OnClick="ImageButton1_Click" Width="100px" BorderColor="Blue" />
@@ -86,14 +78,21 @@
     <div class="checkbox mb-3">
     </div>
             <br />
+            <br />
+      <asp:TextBox ID="TextBoxPass" runat="server" placeholder="Password" Width="300px" BackColor="#F0F0F0" BorderStyle="None" TextMode="Password"></asp:TextBox>
+            <br />
+        <asp:Label ID="LabelParola" runat="server" ForeColor="#CC3300"></asp:Label>
+            <br />
+      <asp:TextBox ID="TextBoxRPass" runat="server" placeholder="Repeat password" Width="300px" BackColor="#F0F0F0" BorderStyle="None" TextMode="Password"></asp:TextBox>
+            <br />
             <asp:Label ID="LabelEroare" runat="server" ForeColor="#CC3300" Visible="False"></asp:Label>
             <br />
-    <asp:Button runat="server" class="w-100 btn btn-lg btn-primary" type="submit" ID="ButtonSubmit" Text="Inregistrare cont" OnClick="ButtonSubmit_Click" Width="327px"></asp:Button>    
+    <asp:Button runat="server" class="w-100 btn btn-lg btn-primary" type="submit" ID="ButtonSubmit" Text="Register account" OnClick="ButtonSubmit_Click" Width="327px"></asp:Button>    
             <br />
             <br />
             <div class="container">
                 <a class="btn btn-lg btn-social btn-facebook" href="https://www.facebook.com/login">
-                <i class="fa fa-facebook fa-fw"></i> Inregistrare cu Facebook&nbsp;&nbsp;&nbsp; </a>
+                Login via Facebook&nbsp;&nbsp; &nbsp; </a>
             </div>
             <asp:TextBox ID="TextBoxImg" runat="server" Visible="False"></asp:TextBox>
 </main>

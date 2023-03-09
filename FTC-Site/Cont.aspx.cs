@@ -11,13 +11,13 @@ namespace Proiect_PIUG
 {
     public partial class Cont : System.Web.UI.Page
     {
-        MySqlConnection con = new MySqlConnection("Data Source=localhost;User id=root;Password=root;Initial Catalog=piug");
+        MySqlConnection con = new MySqlConnection("Data Source=localhost;User id=root;Password=root;Initial Catalog=ftcdb");
         int i;
         protected void Page_Load(object sender, EventArgs e)
         {
             con.Open();
 
-            string stmt = "SELECT * FROM user where username='" + (string)Application["username"] + "'";
+            string stmt = "SELECT * FROM users where username='" + (string)Application["username"] + "'";
 
             MySqlCommand sc = new MySqlCommand(stmt, con);
             MySqlDataReader reader = sc.ExecuteReader();
@@ -38,7 +38,7 @@ namespace Proiect_PIUG
             con.Open();
             MySqlCommand cmd = con.CreateCommand();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "SELECT * from user  where username='" + TextBoxSearch.Text + "'";
+            cmd.CommandText = "SELECT * from users  where username='" + TextBoxSearch.Text + "'";
             cmd.ExecuteNonQuery();
             System.Data.DataTable dt = new System.Data.DataTable();
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);

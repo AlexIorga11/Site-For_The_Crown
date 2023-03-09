@@ -20,10 +20,10 @@ namespace Proiect_PIUG
 
         bool VerificareUser()
         {
-            string ConString = "Data Source=localhost;User id=root;Password=root;Initial Catalog=piug;";
+            string ConString = "Data Source=localhost;User id=root;Password=root;Initial Catalog=ftcdb;";
             string a = TextBoxName.Text;
 
-            string sql = "SELECT * FROM user WHERE username = @a";
+            string sql = "SELECT * FROM users WHERE username = @a";
 
             using (MySqlConnection cn = new MySqlConnection(ConString))
             {
@@ -140,7 +140,7 @@ namespace Proiect_PIUG
 
         protected void ButtonSubmit_Click(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection("Data Source=localhost;User id=root;Password=root;Initial Catalog=piug");
+            MySqlConnection con = new MySqlConnection("Data Source=localhost;User id=root;Password=root;Initial Catalog=ftcdb");
             MySqlCommand cmd;
 
             if(VerificareParole()==true)
@@ -150,7 +150,7 @@ namespace Proiect_PIUG
                     try
                     {
                         con.Open();
-                        cmd = new MySqlCommand("INSERT into piug.user (username,pass,email,pp,data_cont) VALUES(@uss, @pass, @mail, @pp, @data)", con);
+                        cmd = new MySqlCommand("INSERT into ftcdb.users (username,pass,email,pp,data_cont) VALUES(@uss, @pass, @mail, @pp, @data)", con);
 
                         cmd.Parameters.AddWithValue("@uss", TextBoxName.Text);
                         cmd.Parameters.AddWithValue("@pass", TextBoxPass.Text);

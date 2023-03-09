@@ -24,15 +24,16 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="PaginaPrincipalaCC.aspx" title="Aceasta pagina prezinta aspecte ale jocului">Pagina principala</a></li>
-                        <li class="nav-item"><a class="nav-link" href="PropunereNoua.aspx" title="Aceasta pagina va ajuta sa oferiti o preopunere legata de joc sau site sau sa raportati un bug">Propunere noua/Raportati bug</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="PaginaPrincipalaCC.aspx" title="Aceasta pagina prezinta aspecte ale jocului">Main page</a></li>
+                        <li class="nav-item"></li>
+                        <li class="nav-item"><a class="nav-link" href="PropunereNoua.aspx" title="Aceasta pagina va ajuta sa oferiti o preopunere legata de joc sau site sau sa raportati un bug">New suggestion/Report a bug</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cont</a>
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="Cont.aspx" title="Aceasta pagina ofera aspecte in legatura cu cuntul de utilizator sau va ajuta sa cautati un utilizator">Cont</a></li>
-                                <li><a class="dropdown-item" href="SetariCont.aspx" title="Aceasta pagina va ajuta sa modificati aspecte legate de contul dumneavoastra">Setari cont</a></li>
+                                <li><a class="dropdown-item" href="Cont.aspx" title="Aceasta pagina ofera aspecte in legatura cu cuntul de utilizator sau va ajuta sa cautati un utilizator">Account details</a></li>
+                                <li><a class="dropdown-item" href="SetariCont.aspx" title="Aceasta pagina va ajuta sa modificati aspecte legate de contul dumneavoastra">Settings</a></li>
                                 <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="PaginaPrincipalaFC.aspx">Deconectare</a></li>
+                                <li><a class="dropdown-item" href="PaginaPrincipalaFC.aspx">Logout</a></li>
 
                             </ul>
                         </li>
@@ -41,17 +42,17 @@
             </div>
         </nav>        
         <div class="text-left mt-5" style="margin-left:8.8em ; margin-right: 6em">
-                <h2><strong> Ce este "For the crown"?</strong></h2>
-                <h4>For the crown este un joc de tip city manager cu elemente de RPG. Jucatorul trebuie sa ridice un oras cu resursele obtinute cu ajutorul muncitorilor pe care ii atrage in oras cat si prin eliminarea hoardelor de inamici care ataca orasul noaptea.</h4>
+                <h2><strong> What is For the crown?</strong></h2>
+                <h4>For the crown is a RPG city builder game in which the player has to build a colony with the resources gathered by his workers and defend it from the enemy hoardes that will attack during the night.</h4>
                 <p></p>
-                <h2><strong>Cum se va termina jocul? </strong></h2>
-                <h4>Jocul va lua sfarsit cand jucatorul ramane fara vieti sau orasul este distrus in totalitate de catre hoarda de inamici, aceasta devenind tot mai puternica dupa fiecare atac.</h4>
+                <h2><strong>What is the goal of the game? </strong></h2>
+                <h4>The goal is to survive as many days and to slay as many enemies as possible, until the player runs out of lives.</h4>
                 <p></p>
-                <h2><strong>Cladirile implementate pana in prezent</strong></h2>
-                <h4>Cladirile pot fi imbunatatite cu ajutorul resurselor obtinute, acestea devenind mai rezistente atacurilor iar la fiecare nivel obtinand diferite atribute. Acestea sunt:</h4>
+                <h2><strong>Existing buildings</strong></h2>
+                <h4>All the buildings can be upgraded, each having it&#39;s own purpose such as producing resources or managing workers.</h4>
                 <p></p>
-                <h2><strong>Zidul de aparare</strong></h2>
-                <h4>Acesta este prima linie de aparare impotriva inamicilor, seara luptatorii orasului se vor aduna in spatele zidului si se vor  pregati pentru apararea orasului.</h4>
+                <h2><strong>The wall</strong></h2>
+                <h4>The wall it&#39;s the first line of defence against enemy hoardes. When broken, the enemies can get into the colony. Make sure you fix it after every attack.</h4>
         </div>        
         <!-- Page content-->
         <div class="container">
@@ -86,8 +87,8 @@
                  <p></p>
 
         <div class="text-left mt-5" style="margin-left:8.8em ; margin-right: 6em">
-            <h2><strong>Fieraria</strong></h2>
-                <h4>Aceasta va fi folosita pentru a produce echipamentul necesar muncitorilor si luptatorilor din oras (Ex: ciocanul pentru a angaja constructori, furca pentru a angaja fermieri si sabia pentru a angaja luptatori). Mai multe piese de echipament vor fi deblocate in urma imbunatatirii cladirii.</h4>
+            <h2><strong>The blacksmith</strong></h2>
+                <h4>It is used to buy tools and weapons in order to employ new workers and fighters. Like the wall, the blacksmith can be upgraded, each upgrade unlocking new items to produce different resources or to get stronger fighters.</h4>
         </div>                
 <div class="container">
             <div class="text-center mt-5">
@@ -111,22 +112,19 @@
             <br />
             
                             </div> 
-         <div class="text-left mt-5" style="margin-left:8.8em ; margin-right: 6em">
-            <h2><strong>AI: Combat</strong></h2>
-             <h4>Inamicii vor patrula pana cand vor gasi un jucator, aliat al jucatorului sau o structura, la detectarea acesteia acestea se vor indrepta catre tinta iar cand sunt destul de aproape vor lovi tinta provocand daune; daca tinta se indeparteaza prea tare, inamicul se va intoarce in locul lui de patrula.</h4>
-          </div>
         <div class="container">
             <div class="text-left mt-5" style="margin-left:0.7em">
-            <div class="text-center mt-5" resize="fill">
-                            <video width="98%" controls>
-                                <source class="vid-fluid" src="AItest.mp4" type="video/mp4">
-                            </video>
-                        </div>
                 </div>
         </div>
 
         <div class="text-left mt-5" style="margin-left:8.8em ; margin-right: 6em">
-             <h2><strong>Inamicii implementati:</strong></h2>
+             <h2><strong>Emenies:</strong></h2>
+             <div class="text-center mt-5" resize="fill">
+                            &nbsp;
+                            <video width="98%" controls>
+                                <source class="vid-fluid" src="AItest.mp4" type="video/mp4">
+                            </video>
+                        </div>
             </div>
          <div class="text-left mt-5" style="margin-left:6em ; margin-right: 7em">
            <div class="row mb-3">
@@ -159,8 +157,8 @@
         <p></p>
          <p></p>
          <div class="text-left mt-5" style="margin-left:8.8em ; margin-right: 6em">
-            <h2><strong>Ciclu Zi-Noapte</strong></h2>
-            <h4>La sfarsitul jocului se va afisa numarul de zile supravietuite; acest ciclu face tranzitia de la zi la noapte si invers, ziua fiind momentul ideal pentru a ridica constructii in oras iar noaptea pantru a le apara; durata unui ciclu complet este de aproximativ 9 minute.</h4>
+            <h2><strong>Day-Night cycle</strong></h2>
+            <h4>In order to make the game world feel more alive, there was created a day-night cycle. During daytime, the player should focus on producing resources and hiring new workers. During nighttime, the player should say at the wall with hix troops to protect the colony.</h4>
         </div>
         <div class="container">
             <div class="text-left mt-5" style="margin-left:0.7em">

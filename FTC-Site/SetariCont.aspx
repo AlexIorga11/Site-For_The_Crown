@@ -42,25 +42,25 @@
         <!-- Page content-->
         <div class="container">
             <div class="text-center mt-5">
-    <h2 class="h2 mb-3 fw-normal">Introduceti datele pe care doriti sa le modificati</h2>
+    <h2 class="h2 mb-3 fw-normal">Insert new data</h2>
             <div>
-      <asp:TextBox ID="TextBoxName" runat="server"  placeholder="Nume utlizator nou" Width="300px" BackColor="#F0F0F0" BorderStyle="None"></asp:TextBox>
+      <asp:TextBox ID="TextBoxName" runat="server"  placeholder="New username" Width="300px" BackColor="#F0F0F0" BorderStyle="None"></asp:TextBox>
                 <br />
                 <asp:Label ID="LabelNume" runat="server" ForeColor="#CC3300"></asp:Label>
                 <br />
-      <asp:TextBox ID="TextBoxEmail" runat="server"  placeholder="E-mail nou" Width="300px" BackColor="#F0F0F0" BorderStyle="None" TextMode="Email"></asp:TextBox>
+      <asp:TextBox ID="TextBoxEmail" runat="server"  placeholder="New E-mail" Width="300px" BackColor="#F0F0F0" BorderStyle="None" TextMode="Email"></asp:TextBox>
                 <br />
                 <br />
     </div>
       &nbsp;
-      <asp:TextBox ID="TextBoxPass" runat="server" placeholder="Parola noua" Width="300px" BackColor="#F0F0F0" BorderStyle="None" TextMode="Password"></asp:TextBox>
+      <asp:TextBox ID="TextBoxPass" runat="server" placeholder="New passowrd" Width="300px" BackColor="#F0F0F0" BorderStyle="None" TextMode="Password"></asp:TextBox>
       &nbsp;<br />
         <asp:Label ID="LabelParola" runat="server" ForeColor="#CC3300"></asp:Label>
         <br />
-      <asp:TextBox ID="TextBoxRPass" runat="server" placeholder="Repetati parola noua" Width="300px" BackColor="#F0F0F0" BorderStyle="None" TextMode="Password"></asp:TextBox>
+      <asp:TextBox ID="TextBoxRPass" runat="server" placeholder="Repeat password" Width="300px" BackColor="#F0F0F0" BorderStyle="None" TextMode="Password"></asp:TextBox>
             <br />
         <br />
-            <h4 class="h4 mb-3 fw-normal">Selectati imaginea de profil</h4>
+            <h4 class="h4 mb-3 fw-normal">Select a profile image</h4>
     <div>
         <asp:Panel ID="Panel1" runat="server" Height="350px">
             <asp:ImageButton ID="ImageButton1" runat="server" Height="100px" ImageUrl="~/Photos/Profile/1.PNG" Width="100px" BorderColor="Blue" />
@@ -84,7 +84,7 @@
             <br />
             <asp:Label ID="LabelEroare" runat="server" ForeColor="#CC3300" Visible="False"></asp:Label>
             <br />
-    <asp:Button runat="server" class="w-100 btn btn-lg btn-primary" type="submit" ID="ButtonSubmit" Text="Salvati setarile" Width="327px"></asp:Button>    
+    <asp:Button runat="server" class="w-100 btn btn-lg btn-primary" type="submit" ID="ButtonSubmit" Text="Save new info" Width="327px"></asp:Button>    
             <br />
             </div>
         </div>

@@ -18,7 +18,7 @@ namespace Proiect_PIUG
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection("Data Source=localhost;User id=root;Password=root;Initial Catalog=piug");
+            MySqlConnection con = new MySqlConnection("Data Source=localhost;User id=root;Password=root;Initial Catalog=ftcdb");
             MySqlCommand cmd;
 
             if(TextBoxEmail.Text != "")
@@ -32,7 +32,7 @@ namespace Proiect_PIUG
                             try
                             {
                                 con.Open();
-                                cmd = new MySqlCommand("INSERT into piug.buguri (username,email,titlu_bug,text_bug) VALUES(@uss, @mail, @titlu, @text)", con);
+                                cmd = new MySqlCommand("INSERT into ftcdb.bugs (username,email,titlu_bug,text_bug) VALUES(@uss, @mail, @titlu, @text)", con);
 
                                 cmd.Parameters.AddWithValue("@uss", (string)Application["username"]);
                                 cmd.Parameters.AddWithValue("@mail", TextBoxEmail.Text);
@@ -63,7 +63,7 @@ namespace Proiect_PIUG
                             try
                             {
                                 con.Open();
-                                cmd = new MySqlCommand("INSERT into piug.propuneri (username,email,titlu_propunere,text_propunere) VALUES(@uss, @mail, @titlu, @text)", con);
+                                cmd = new MySqlCommand("INSERT into ftcdb.props (username,email,titlu_propunere,text_propunere) VALUES(@uss, @mail, @titlu, @text)", con);
 
                                 cmd.Parameters.AddWithValue("@uss", (string)Application["username"]);
                                 cmd.Parameters.AddWithValue("@mail", TextBoxEmail.Text);
@@ -96,7 +96,7 @@ namespace Proiect_PIUG
 
         protected void ButtonSubmit_Click(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection("Data Source=localhost;User id=root;Password=root;Initial Catalog=piug");
+            MySqlConnection con = new MySqlConnection("Data Source=localhost;User id=root;Password=root;Initial Catalog=ftcdb");
             MySqlCommand cmd;
 
             if (TextBoxEmail.Text != "")
@@ -112,7 +112,7 @@ namespace Proiect_PIUG
                             try
                             {
                                 con.Open();
-                                cmd = new MySqlCommand("INSERT into piug.buguri (username,email,titlu_bug,text_bug) VALUES(@uss, @mail, @titlu, @text)", con);
+                                cmd = new MySqlCommand("INSERT into ftcdb.bugs (username,email,titlu_bug,text_bug) VALUES(@uss, @mail, @titlu, @text)", con);
 
                                 cmd.Parameters.AddWithValue("@uss", (string)Application["username"]);
                                 cmd.Parameters.AddWithValue("@mail", TextBoxEmail.Text);
@@ -140,12 +140,12 @@ namespace Proiect_PIUG
 
                         else
                         {
-                            Process.Start("mailto: alex.iorga.11@gmail.com" + "?subject= Propunere: " + TextBoxTitlu.Text + "?body= " + TextBoxComm.Text);
+                            Process.Start("mailto: alex.iorga.11@gmail.com" + "?subject= Propunere: " + TextBoxTitlu.Text + "?body= " + TextBoxComm.Text);                   
 
                             try
                             {
                                 con.Open();
-                                cmd = new MySqlCommand("INSERT into piug.propuneri (username,email,titlu_propunere,text_propunere) VALUES(@uss, @mail, @titlu, @text)", con);
+                                cmd = new MySqlCommand("INSERT into ftcdb.props (username,email,titlu_propunere,text_propunere) VALUES(@uss, @mail, @titlu, @text)", con);
 
                                 cmd.Parameters.AddWithValue("@uss", (string)Application["username"]);
                                 cmd.Parameters.AddWithValue("@mail", TextBoxEmail.Text);

@@ -46,8 +46,8 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="PaginaPrincipalaFC.aspx" title="Aceasta pagina prezinta aspecte ale jocului">Pagina principala</a></li>
-                        <li class="nav-item"><a class="nav-link" href="InregistrareCont.aspx" title="Aceasta pagina va ajuta sa va creati un cont nou">Inregistrare cont</a></li>
+                        <li class="nav-item"><a class="nav-link" href="PaginaPrincipalaFC.aspx" title="Aceasta pagina prezinta aspecte ale jocului">Main page</a></li>
+                        <li class="nav-item"><a class="nav-link" href="InregistrareCont.aspx" title="Aceasta pagina va ajuta sa va creati un cont nou">Sign up</a></li>
                     </ul>
                 </div>
             </div>
@@ -66,21 +66,21 @@
 
         <main class="form-signin">
     <img class="mb-4" src="Other/Crown.png" alt="" width="100" height="68">
-    <h2 class="h2 mb-3 fw-normal">Introduceti datele de conectare</h2>
+    <h2 class="h2 mb-3 fw-normal">Login details</h2>
             <div>
-      <asp:TextBox ID="TextBoxName" runat="server"  placeholder="Nume utlizator" Width="300px" BackColor="#F0F0F0" BorderStyle="None"></asp:TextBox>
+      <asp:TextBox ID="TextBoxName" runat="server"  placeholder="Username" Width="300px" BackColor="#F0F0F0" BorderStyle="None"></asp:TextBox>
                 <br />
     </div>
     <div>
       &nbsp;
-      <asp:TextBox ID="TextBoxPass" runat="server" placeholder="Parola" Width="300px" BackColor="#F0F0F0" BorderStyle="None" TextMode="Password"></asp:TextBox>
+      <asp:TextBox ID="TextBoxPass" runat="server" placeholder="Password" Width="300px" BackColor="#F0F0F0" BorderStyle="None" TextMode="Password"></asp:TextBox>
       &nbsp;</div>
 
     <div class="checkbox mb-3">
         <br />
         <asp:Label ID="LabelErr" runat="server" ForeColor="#CC3300"></asp:Label>
     </div>
-    <asp:Button runat="server" class="w-100 btn btn-lg btn-primary" type="submit" ID="ButtonSubmit" OnClick="ButtonSubmit_Click" Text="Logare"></asp:Button>    
+    <asp:Button runat="server" class="w-100 btn btn-lg btn-primary" type="submit" ID="ButtonSubmit" OnClick="ButtonSubmit_Click" Text="Login"></asp:Button>    
 </main>
 
 

@@ -12,10 +12,10 @@ namespace Proiect_PIUG
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection("Data Source=localhost;User id=root;Password=root;Initial Catalog=piug");
+            MySqlConnection con = new MySqlConnection("Data Source=localhost;User id=root;Password=root;Initial Catalog=ftcdb");
             con.Open();
 
-            string stmt = "SELECT * FROM user where username='" + (string)Application["usernameC"] + "'";
+            string stmt = "SELECT * FROM users where username='" + (string)Application["usernameC"] + "'";
 
             MySqlCommand sc = new MySqlCommand(stmt, con);
             MySqlDataReader reader = sc.ExecuteReader();

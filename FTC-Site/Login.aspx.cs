@@ -10,7 +10,7 @@ namespace Proiect_PIUG
 {
     public partial class Login : System.Web.UI.Page
     {
-        MySqlConnection con = new MySqlConnection("Data Source=localhost;User id=root;Password=root;Initial Catalog=piug");       
+        MySqlConnection con = new MySqlConnection("Data Source=localhost;User id=root;Password=root;Initial Catalog=ftcdb");       
         int i;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -24,7 +24,7 @@ namespace Proiect_PIUG
             con.Open();
             MySqlCommand cmd = con.CreateCommand();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "SELECT * from user  where username='" + TextBoxName.Text + "'and pass='" + TextBoxPass.Text + "'";
+            cmd.CommandText = "SELECT * from users  where username='" + TextBoxName.Text + "'and pass='" + TextBoxPass.Text + "'";
             cmd.ExecuteNonQuery();
             System.Data.DataTable dt = new System.Data.DataTable();
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
